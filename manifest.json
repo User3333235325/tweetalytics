@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Tweetalytics",
+    "version": "1.0",
+    "description": "A Twitter search functionality with tweet's text extraction and simple sentiment analysis",
+    "action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://twitter.com/*"],
+            "js": ["js/extractTweets.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "static/dictionary.json"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}

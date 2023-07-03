@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <script src="static/bootstrap.bundle.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="static/popup.css">
+        
+        <script src="js/popup.js"></script>
+
+        <title>Tweetalytics</title>
+        
+    </head>
+    
+    <body>
+        
+        <main class="container-fluid py-2 text-center dark-mode">
+            
+            <h2 class="text-muted mb-4">Tweetalytics</h2>
+
+            <form id="search-form">
+
+                <div class="form-group mb-3">
+                    <input class="form-control mx-auto w-auto" autocomplete="off" autofocus placeholder="Search Twitter" type="text" id="search-query" name="q">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+                
+                <div class="text-muted mt-3">
+                    <hr>
+                </div>
+
+                <div class="text-muted filters-heading mb-2">Filters</div>
+                <div class="filters form-group mt-1 text-muted">
+                    <select class="form-control w-auto" id="filter-presets"></select>
+                    <button class="btn btn-secondary nowrap" type="button" id="save-filters-button" title="Save Filters">Save</button>
+                    <button class="btn btn-danger" type="button" id="delete-filters-button" title="Delete the selected filter preset">Delete</button>
+                </div>
+                
+                <div class="filters form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="follow-filter">
+                    <label class="nowrap px-2" for="follow-filter">
+                        Only show results from people I follow
+                    </label>
+                </div>
+                
+                <div class="filters form-check mt-1">
+                    <input class="form-check-input" type="checkbox" id="latest-filter" checked>
+                    <label class="nowrap px-2" for="latest-filter">
+                        Sort the tweets from new to old
+                    </label>
+                </div>
+
+                <div class="filters form-group mt-1">
+                    <label for="date-filter">Search within last</label>
+                    <input type="number" class="form-control" id="date-filter" min="1" max="3650" value="1">
+                    <label for="date-filter">day(s).</label>
+                </div>
+                
+                <label class="mt-1" for="author-filter">From these accounts:</label>
+                
+                <div class="filters form-group mt-1">
+                    <input class="form-control mx-auto w-auto" autocomplete="off" placeholder="@username1 @username2 etc." type="text" id="author-filter" name="author">
+                </div>
+
+            </form>
+            
+            <div class="text-muted filters-heading mt-3">
+                <hr>
+            </div>
+            
+            <div class="text-muted filters-heading mb-2">Process Tweets</div>
+            
+            <button class="btn btn-secondary mt-1" id="extractTweets" title="Start extracting tweets from the currently active Twitter tab">Start</button>
+            
+            <div class="mt-1" id="sentimentResult"></div>
+
+        </main>
+        
+    </body>
+</html>
+
+
