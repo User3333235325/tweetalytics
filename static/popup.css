@@ -1,0 +1,63 @@
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.dark-mode #search-form #search-query {
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+/* Filters formatting */
+.dark-mode #date-filter {
+    background-color: #333;
+    color: #f2f2f2;
+    width: 80px;
+}
+
+.dark-mode #author-filter {
+    background-color: #333;
+    color: #f2f2f2;   
+}
+
+.dark-mode #filter-presets {
+    background-color: #333;
+    color: #f2f2f2;   
+}
+
+.filters-heading {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrap individual search form elements into one row */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group label {
+    flex: 0 0 auto;
+}
+
+.form-group select {
+    flex: 0 0 auto;
+}
+
+/* Keep the text in a single row */
+.nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Sentiment result formatting */
+#sentimentResult {
+    font-size: 40px;
+}
