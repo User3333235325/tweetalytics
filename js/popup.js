@@ -263,19 +263,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Display the sentiment in the HTML element
                         const sentimentResultElement = document.getElementById("sentimentResult");
                         if (sentimentResult[activeTabId] > 40) {
-                            sentimentResultElement.textContent = "😁 " + sentimentResult[activeTabId]; // Strongly Positive
+                            sentimentResultElement.textContent = "😁"; // Strongly Positive
                             sentimentResultElement.title = "Strongly Positive";
                         } else if (sentimentResult[activeTabId] > 10) {
-                            sentimentResultElement.textContent = "🙂 " + sentimentResult[activeTabId]; // Moderately Positive
+                            sentimentResultElement.textContent = "🙂"; // Moderately Positive
                             sentimentResultElement.title = "Moderately Positive";
                         } else if (sentimentResult[activeTabId] < -40) {
-                            sentimentResultElement.textContent = "😭 " + sentimentResult[activeTabId]; // Strongly Negative
+                            sentimentResultElement.textContent = "😭"; // Strongly Negative
                             sentimentResultElement.title = "Strongly Negative";
                         } else if (sentimentResult[activeTabId] < -10) {
-                            sentimentResultElement.textContent = "😔 " + sentimentResult[activeTabId]; // Moderately Negative
+                            sentimentResultElement.textContent = "😔"; // Moderately Negative
                             sentimentResultElement.title = "Moderately Negative";
                         } else {
-                            sentimentResultElement.textContent = "😐 " + sentimentResult[activeTabId]; // Neutral
+                            sentimentResultElement.textContent = "😐"; // Neutral
                             sentimentResultElement.title = "Neutral";
                         }
                     }
