@@ -97,8 +97,8 @@ When developing my Chrome extension, I focused on making it easy to use and prov
    - 😁 - Strongly Positive
    - 🙂 - Moderately Positive
    - 😐 - Neutral
-   - 😭 - Strongly Negative
    - 😔 - Moderately Negative
+   - 😭 - Strongly Negative
 
    These emojis serve as visual indicators of the sentiment expressed in the tweets, allowing users to quickly grasp the overall sentiment surrounding a specific topic.
 
